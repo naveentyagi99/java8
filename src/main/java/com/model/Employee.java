@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Employee {
+public class Employee implements Comparable{
     private String firstName;
     private String lastName;
     private int age;
@@ -44,6 +44,12 @@ public class Employee {
     }
 
     @Override
+    public int compareTo(Object o) {
+        Employee e = (Employee) o;
+        return this.getFirstName().compareTo(e.getFirstName());
+    }
+
+    @Override
     public String toString() {
         return this.firstName + " " + this.lastName + "  Age : " + this.age;
     }
@@ -64,5 +70,8 @@ public class Employee {
         return employeeMap;
     }
 
+    public static List<String> getEmployeeName() {
+        return Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
+    }
 
 }

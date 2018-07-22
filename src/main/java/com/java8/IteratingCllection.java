@@ -20,10 +20,7 @@ public class IteratingCllection {
                 }
         );
         System.out.println();
-        System.out.println("Filter on List");
-        employeeList.stream()
-                .filter(employee -> employee.getLastName().equals("Kumar"))
-                .forEach(System.out::println);
+
 
         //Iterating through Map
         System.out.println();
